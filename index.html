@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPIC Open Day</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding-top: 100px;
+        }
+
+        .box {
+            background: white;
+            width: 350px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            background-color: #222;
+            color: white;
+            cursor: pointer;
+        }
+
+        #message {
+            color: red;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>EPIC Open Day</h1>
+
+        <p>Enter the password to continue</p>
+
+        <input type="password" id="password" placeholder="Password">
+
+        <br>
+
+        <button onclick="checkPassword()">Enter</button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+        function checkPassword() {
+
+            const password = document.getElementById("password").value;
+
+            const correctPassword = "EPIC2026";
+
+            if (password === correctPassword) {
+
+                window.location.href = "question.html";
+
+            } else {
+
+                document.getElementById("message").textContent =
+                    "Incorrect password";
+
+            }
+        }
+    </script>
+
+</body>
+</html>
